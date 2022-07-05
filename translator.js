@@ -3,9 +3,9 @@ const translate = require('@vitalets/google-translate-api');
 
 require('dotenv').config()
 
-const Token = process.env.TOKEN
+// const Token = process.env.TOKEN
 
-// const Token = "5416103021:AAFDhxfRDMh0_z9LKJ932Q2NaiQCm9S3gh0";
+const Token = "5416103021:AAFDhxfRDMh0_z9LKJ932Q2NaiQCm9S3gh0";
 const {
   read,
   write
