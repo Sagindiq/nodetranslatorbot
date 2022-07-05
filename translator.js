@@ -25,16 +25,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 });
 
 
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
-  const message = msg.text;
-  const message_id = msg.message_id;
-  const nickName = msg.chat.first_name;
-  const username = msg.chat.username;
-
-  const slash = message.split('/')[1];
-  
-   var options = {
+var options = {
       reply_markup: JSON.stringify({
         inline_keyboard: [
           [{ text: 'Some button text 1', callback_data: '1' }],
@@ -45,6 +36,16 @@ bot.on('message', (msg) => {
     };
 
 bot.sendMessage(msg.chat.id, "answer.", options);
+
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  const message = msg.text;
+  const message_id = msg.message_id;
+  const nickName = msg.chat.first_name;
+  const username = msg.chat.username;
+
+  const slash = message.split('/')[1];
+  
 
   const readData = read('users.json');
   const foundUser = readData.find(el => el.id == chatId)
