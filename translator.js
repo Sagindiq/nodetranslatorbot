@@ -24,7 +24,6 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, resp);
 });
 
-bot.sendMessage(msg.chat.id, "answer.", options);
 
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
@@ -34,7 +33,6 @@ bot.on('message', (msg) => {
   const username = msg.chat.username;
 
   const slash = message.split('/')[1];
-  
 
   const readData = read('users.json');
   const foundUser = readData.find(el => el.id == chatId)
