@@ -24,17 +24,6 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, resp);
 });
 
-
-var options = {
-      reply_markup: JSON.stringify({
-        inline_keyboard: [
-          [{ text: 'Some button text 1', callback_data: '1' }],
-          [{ text: 'Some button text 2', callback_data: '2' }],
-          [{ text: 'Some button text 3', callback_data: '3' }]
-        ]
-      })
-    };
-
 bot.sendMessage(msg.chat.id, "answer.", options);
 
 bot.on('message', (msg) => {
