@@ -1,0 +1,42 @@
+[
+    {
+        "name": "uz",
+        "full_name": "Uzbek"
+    },
+    {
+        "name": "en",
+        "full_name": "English"
+    },
+    {
+        "name": "ru",
+        "full_name": "Russian"
+    },
+    {
+        "name": "ar",
+        "full_name": "Arabic"
+    },
+    {
+        "name": "tr",
+        "full_name": "Turkish"
+    },
+    {
+        "name": "kk",
+        "full_name": "Kazakh"
+    },
+    {
+        "name": "ko",
+        "full_name": "Korean"
+    },
+    {
+        "name": "ky",
+        "full_name": "Kyrgz"
+    },
+    {
+        "name": "fr",
+        "full_name": "France"
+    },
+    {
+        "name": "tg",
+        "full_name": "Tajik"
+    }
+]
