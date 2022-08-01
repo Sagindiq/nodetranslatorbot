@@ -5,7 +5,6 @@ require('dotenv').config()
 
 const Token = process.env.TOKEN
 
-// const Token = "5416103021:AAFDhxfRDMh0_z9LKJ932Q2NaiQCm9S3gh0";
 const {
   read,
   write
@@ -15,7 +14,6 @@ const bot = new TelegramBot(Token, {
   polling: true
 });
 
-// Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
 
   const chatId = msg.chat.id;
@@ -25,7 +23,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 });
 
 
-bot.on('message', (msg) => {
+bot.on('message', msg => {
   const chatId = msg.chat.id;
   const message = msg.text;
   const message_id = msg.message_id;
@@ -36,6 +34,35 @@ bot.on('message', (msg) => {
 
   const readData = read('users.json');
   const foundUser = readData.find(el => el.id == chatId)
+
+
+  const langName = translate.languages
+    const lang = translate.languages
+
+    let langKeys = Object.keys(lang);
+    let langValue = Object.values(langName)
+
+    langKeys.splice(0, 1);
+    langValue.splice(0, 1);
+    langKeys.splice(langKeys.length - 2, 2);
+    langValue.splice(langValue.length - 2, 2);
+
+    const langArr = []
+
+    langValue.map(v => {
+
+      langArr.push({name: v})
+
+    })
+    
+    
+    langArr.map(el => {
+
+      langKeys.map(k => {
+        el[`${k}`] = el['name']
+      })
+      
+    })
 
   const languages = read('languages.json');
   const filterLanguage = languages.find(el => el.name == slash);
@@ -108,10 +135,16 @@ bot.on('message', (msg) => {
 
   else if(message == '/til_tanlash') {
 
+    langArr.splice(0, 1)
+
     bot.sendMessage(chatId, `Til sozlamalari:\n ${
-      languages.map(el =>  {
-        return `til: ${el.full_name} /${el.name} \n`
+
+      langKeys.map(el =>  {
+
+        return `/${el}`
+
       })
+      
     }`)
   }
   
