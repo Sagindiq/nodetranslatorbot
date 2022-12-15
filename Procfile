@@ -1,1 +1,1 @@
-worker: translator.js
+worker: node translator.js

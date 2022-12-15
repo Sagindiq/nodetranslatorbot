@@ -1,8 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const translate = require('@vitalets/google-translate-api');
 
-require('dotenv').config()
-
+require('dotenv').config({path: './translator.env'})
 const Token = process.env.TOKEN
 
 const {
